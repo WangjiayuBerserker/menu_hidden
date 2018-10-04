@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>菜单练习</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            color: #FFFFFF;
+
+        }
+        ul{
+            list-style: none;
+        }
+        .hidden{
+            display: none;
+        }
+        .menu{
+            width: 100px;
+            float: left;
+            min-height: 600px;
+            background-color: dimgrey;
+        }
+        .menu-title{
+            text-align: center;
+        }
+        .menu-items{
+            background-color: black;
+        }
+        li{
+            border:1px solid grey;
+        }
+    </style>
+</head>
+<body>
+<div class="menu">
+    <div class="menu-title">菜单一</div>
+    <div class="menu-items hidden">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+    <div class="menu-title">菜单二</div>
+    <div class="menu-items hidden">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+    <div class="menu-title">菜单三</div>
+    <div class="menu-items hidden">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+</div>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script>
+        var $dTag = $(".menu-title");
+        $dTag.click(function () {
+            console.log(1);
+            $(".menu-items").addClass("hidden");
+            $(this).next().toggleClass("hidden");
+        })
+    </script>
+</body>
+</html>
